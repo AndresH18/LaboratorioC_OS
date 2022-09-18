@@ -1,18 +1,35 @@
-# TODO's
+# Laboratorio de C
 
-## Calculadora
+Realización de los ejercicios del Laboratorio de C de la asignatura de Sistemas Operativos.  
+
+Las actividades de este laboratorio incluye:  
+
+- Emular una calculadora 
+- metodos, tipos de datos y estructuras de control basicas del lenguaje C. 
+- Punteros y memorias. 
+- Headers. 
+
+### Calculadora
 
 - Header files
 - Actions
-    - ~~Sumar~~
-    - ~~Restar~~
-    - ~~Multiplicar~~
-    - ~~Dividir~~
-    - ~~Calcular un Area~~
-        - ~~Puede ser de un Circulo, Cuadrado, etc~~
-    - ~~Descontar un porcentaje a un valor~~
-    - ~~Longitud de una circunferencia~~
-    - Conversión de números a Romanos (13 == XII)
+    - Sumar
+    - Restar
+    - Multiplicar
+    - Dividir
+    - Descontar un porcentaje a un valor
+    
+### Geometria
+    
+- Calcular un Area
+    - Circulo
+    - Triangulo
+    - Cuadrado
+    - Rectangulo
+- Longitud de una circunferencia
 
-## Funcionalidad que incluya manejo de memoria
+### Conversion a Numero Romanos
+
+- Convertir numeros a su equivalente romano (24 => XXIV)
+
 
