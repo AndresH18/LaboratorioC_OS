@@ -99,7 +99,7 @@ int helloWorld() {
 
 void calculadora() {
     int option;
-    printf("\n..........Es enserio?...Calculadora?.................Esta bien....\n"); // glorified calculator
+    printf("\n..........Es enserio?...Calculadora?..........\n"); // glorified calculator
 
     do {
         printf("\nQue quieres 'calcular':\n"
