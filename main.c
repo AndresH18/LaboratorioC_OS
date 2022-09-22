@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "algebra.h"
 #include "roman.h"
 #include "section1.h"
 #include "section2.h"
@@ -26,6 +27,7 @@ int main() {
         fflush(stdout);
 
         scanf_s("%d", &option);
+        fflush(stdin);
         switch (option) {
             case 1:
                 ejercicios();
@@ -88,7 +90,116 @@ int helloWorld() {
     return 0;
 }
 
-void calculadora() {}
+void calculadora() {
+    int option;
+    printf("\n..........Es enserio?...Calculadora?.................Esta bien....\n"); // glorified calculator
+
+    do {
+        printf("\nQue quieres 'calcular':\n"
+               "1 Suma\n"
+               "2 Resta\n"
+               "3 Multiplicacion\n"
+               "4 Division\n"
+               "5 Descontar porcentaje\n"
+               "0 regresar al menu anterior\n"
+               "> ");
+        fflush(stdout);
+        scanf_s("%d", &option);
+        fflush(stdin);
+        int x, y;
+        switch (option) {
+            case 1:
+                // suma
+                printf("\nIngresa el primer numero (entero)\n"
+                       "> ");
+                fflush(stdout);
+                scanf_s("%d", &x);
+                fflush(stdin);
+                printf("Ingresa el segundo numero (entero)\n"
+                       "> ");
+                fflush(stdout);
+                scanf_s("%d", &y);
+                fflush(stdin);
+
+                printf("%d + %d = %d", x, y, sumar(x, y));
+                break;
+            case 2:
+                // resta
+                printf("\nIngresa el primer numero (entero)\n"
+                       "> ");
+                fflush(stdout);
+                scanf_s("%d", &x);
+                fflush(stdin);
+                printf("Ingresa el segundo numero (entero)\n"
+                       "> ");
+                fflush(stdout);
+                scanf_s("%d", &y);
+                fflush(stdin);
+
+                printf("%d - %d = %d", x, y, restar(x, y));
+                break;
+            case 3:
+                // multiplicacion
+                printf("\nIngresa el primer numero (entero)\n"
+                       "> ");
+                fflush(stdout);
+                scanf_s("%d", &x);
+                fflush(stdin);
+                printf("Ingresa el segundo numero (entero)\n"
+                       "> ");
+                fflush(stdout);
+                scanf_s("%d", &y);
+                fflush(stdin);
+
+                printf("%d * %d = %ld", x, y, multiplicar(x, y));
+                break;
+            case 4:
+                // division
+                printf("\nIngresa el Dividendo\n"
+                       "> ");
+                fflush(stdout);
+                scanf_s("%d", &x);
+                fflush(stdin);
+                printf("\nIngresa el Divisor\n"
+                       "> ");
+                fflush(stdout);
+                scanf_s("%d", &y);
+                fflush(stdin);
+                if (y == 0) {
+                    printf("......Es mejor que dejes de usar la calculadora....Dividir por 0, como se te ocurre!!\n");
+                    fflush(stdout);
+                    option = 0;
+                } else {
+                    printf("%d / %d = %f\n", x, y, dividir(x, y));
+                    fflush(stdout);
+                }
+                break;
+            case 5:
+                // porcentaje
+                double valor, tasa;
+                printf("\nIngresa el valor (double)\n"
+                       "> ");
+                fflush(stdout);
+                scanf_s("%lf", &valor);
+                fflush(stdin);
+                printf("Ingresa el porentaje (double) ej. 0.8\n"
+                       "> ");
+                fflush(stdout);
+                scanf_s("%lf", &tasa);
+                fflush(stdin);
+
+                printf("El %f de %f es %f\n", tasa, valor, descontarPorcentaje(valor, tasa));
+                fflush(stdout);
+                break;
+            case 0:
+                // regresar
+                option = 0; // ya se que es redundante!!
+                break;
+            default:
+                break;
+        }
+    } while (option);
+}
 
 void convertidorRomano() {
     int number;
@@ -97,6 +208,7 @@ void convertidorRomano() {
            "> ");
     fflush(stdout);
     scanf_s("%d", &number);
+    fflush(stdin);
     char *romano = numberToRoman(number);
     printf("Romano: %s", romano);
     free(romano);
@@ -115,6 +227,7 @@ void ejercicios() {
                "> ");
         fflush(stdout);
         scanf_s("%d", &option);
+        fflush(stdin);
 
         switch (option) {
             case 1:
@@ -123,6 +236,7 @@ void ejercicios() {
                 fflush(stdout);
                 int number = 0;
                 scanf_s("%d", &number);
+                fflush(stdin);
                 number = binaryGap(number);
                 printf("La distancia binaria es %d\n", number);
                 fflush(stdout);
@@ -138,6 +252,7 @@ void ejercicios() {
                     fflush(stdout);
 
                     scanf_s("%d", &option2);
+                    fflush(stdin);
 //                if (option2 != 0) {
                     if (option2) {
                         printf("Ingrese el numero de elementos que tiene el vector\n"
@@ -145,6 +260,7 @@ void ejercicios() {
                         fflush(stdout);
                         int size;
                         scanf_s("%d", &size);
+                        fflush(stdin);
                         int *array = calloc(size, sizeof(int));
                         printf("Ingrese los elementos del vector (size=%d)\n", size);
                         fflush(stdout);
@@ -153,6 +269,7 @@ void ejercicios() {
                             printf("%d> ", i + 1);
                             fflush(stdout);
                             scanf_s("%d", array + i);
+                            fflush(stdin);
                         }
                         switch (option2) {
                             // rotar vector
@@ -162,6 +279,7 @@ void ejercicios() {
                                 fflush(stdout);
                                 int rot;
                                 scanf_s("%d", &rot);
+                                fflush(stdin);
                                 rotateArray(array, size, rot);
                                 printf("{");
                                 for (int i = 0; i < size; ++i) {
@@ -196,6 +314,7 @@ void ejercicios() {
                            "> ");
                     fflush(stdout);
                     scanf_s("%d", &option3);
+                    fflush(stdin);
 
                     switch (option3) {
                         case 1:
@@ -204,14 +323,17 @@ void ejercicios() {
                                    "> ");
                             fflush(stdout);
                             scanf_s("%d", &x);
+                            fflush(stdin);
                             printf("Ingrese la coordenada final (debe ser mayor a %d)\n"
                                    "> ", x);
                             fflush(stdout);
                             scanf_s("%d", &y);
+                            fflush(stdin);
                             printf("Ingrese la distancia de Salto (debe ser positiva)\n"
                                    "> ");
                             fflush(stdout);
                             scanf_s("%d", &d);
+                            fflush(stdin);
 
                             printf("El numero de saltos para llegar del punto %d hasta al menos %d es %d\n",
                                    x, y, frogJump(x, y, d));

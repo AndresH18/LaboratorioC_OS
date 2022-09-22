@@ -5,11 +5,19 @@
 #ifndef LABORATORIOC_ALGEBRA_H
 #define LABORATORIOC_ALGEBRA_H
 
+int sumar(int, int);
+
 double sumarDouble(double d1, double d2);
+
+int restar(int, int);
 
 double restarDouble(double d1, double d2);
 
+long multiplicar(int, int);
+
 double multiplicarDouble(double d1, double d2);
+
+double dividir(int, int);
 
 double dividirDouble(double d1, double d2);
 
