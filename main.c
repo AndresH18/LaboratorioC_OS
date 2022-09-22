@@ -14,7 +14,7 @@ void convertidorRomano();
 
 int main() {
 
-    int option = 0;
+    int option = 1;
     printf("Bienvenido al Laboratorio de C!\n");
 
     do {
@@ -170,7 +170,7 @@ void calculadora() {
                     fflush(stdout);
                     option = 0;
                 } else {
-                    printf("%d / %d = %f\n", x, y, dividir(x, y));
+                    printf("%d / %d = %.3f\n", x, y, dividir(x, y));
                     fflush(stdout);
                 }
                 break;
@@ -188,7 +188,7 @@ void calculadora() {
                 scanf_s("%lf", &tasa);
                 fflush(stdin);
 
-                printf("El %f de %f es %f\n", tasa, valor, descontarPorcentaje(valor, tasa));
+                printf("El %.3f de %.3f es %.3f\n", tasa, valor, descontarPorcentaje(valor, tasa));
                 fflush(stdout);
                 break;
             case 0:
@@ -210,7 +210,7 @@ void convertidorRomano() {
     scanf_s("%d", &number);
     fflush(stdin);
     char *romano = numberToRoman(number);
-    printf("Romano: %s", romano);
+    printf("Romano: %s\n", romano);
     free(romano);
 
 }
