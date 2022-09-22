@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "algebra.h"
+#include "geometria.h"
 #include "roman.h"
 #include "section1.h"
 #include "section2.h"
@@ -12,6 +13,8 @@ void ejercicios();
 
 void convertidorRomano();
 
+void area();
+
 int main() {
 
     int option = 1;
@@ -22,6 +25,7 @@ int main() {
                "1 Ejercicios Codility\n"
                "2 Calculadora\n"
                "3 Convertor a Numero Romano\n"
+               "4 Geometria\n"
                "0 Salir\n"
                "> ");
         fflush(stdout);
@@ -37,6 +41,9 @@ int main() {
                 break;
             case 3:
                 convertidorRomano();
+                break;
+            case 4:
+                area();
                 break;
             case 0:
                 option = 0;
@@ -352,6 +359,85 @@ void ejercicios() {
                 break;
             case 0:
                 option = 0;
+                break;
+            default:
+                break;
+        }
+    } while (option);
+}
+
+void area() {
+    int option;
+    double v1, v2;
+    do {
+        printf("\nIngrese el numero de la opcion que desea realizar\n"
+               "1 Perimetro\n"
+               "2 Area Circulo\n"
+               "3 Area Triangulo\n"
+               "4 Area Cuadrado\n"
+               "5 Area Rectangulo\n"
+               "0 regresar al menu anterior\n"
+               "> ");
+        fflush(stdout);
+        scanf_s("%d", &option);
+        fflush(stdin);
+        switch (option) {
+            case 1:
+                // perimetro
+                printf("\nIngrese el radio de la circunferencia (double)\n"
+                       "> ");
+                fflush(stdout);
+                scanf_s("%lf", &v1);
+                printf("El perimetro es %.3lf\n", perimetro(v1));
+                break;
+            case 2:
+                // circulo
+                printf("\nIngrese el radio de la circunferencia (double)\n"
+                       "> ");
+                fflush(stdout);
+                scanf_s("%lf", &v1);
+                printf("El area es %.3lf\n", areaCirculo(v1));
+                break;
+            case 3:
+                // triangulo
+                printf("\nIngrese la base del triangulo (double)\n"
+                       "> ");
+                fflush(stdout);
+                scanf_s("%lf", &v1);
+
+                printf("Ingrese la altura del triangulo (double)\n"
+                       "> ");
+                fflush(stdout);
+                scanf_s("%lf", &v2);
+                printf("El area del triangulo es %.3lf\n", areaTriangulo(v1, v2));
+                break;
+            case 4:
+                // cuadrado
+                printf("\nIngrese el lado del cuadrado (double)\n"
+                       "> ");
+                fflush(stdout);
+                scanf_s("%lf", &v1);
+
+                printf("El area del cuadrado es %.3lf\n", areaCuadrado(v1));
+                break;
+            case 5:
+                // rectangulo
+                printf("\nIngrese la base del Rectangulo (double)\n"
+                       "> ");
+                fflush(stdout);
+                scanf_s("%lf", &v1);
+
+                printf("Ingrese la altura del Rectangulo (double)\n"
+                       "> ");
+                fflush(stdout);
+                scanf_s("%lf", &v2);
+                printf("El area del rectangulo es %.3lf\n", areaRectangulo(v1, v2));
+                break;
+            case 0:
+                // retornar
+                option = 0; // ya se que es reduntante
+                break;
+            default:
                 break;
         }
     } while (option);
