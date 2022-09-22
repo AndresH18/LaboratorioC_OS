@@ -176,7 +176,6 @@ void ejercicios() {
                                 break;
                             case 2:
                                 // encontrar elemento sin pareja
-                                // TODO: revisar el metodo findNotPaired, creo que no esta funcionando
                                 printf("El elemento sin pareja es %d\n", findNotPaired(array, size));
                                 break;
                             default:
