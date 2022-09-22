@@ -9,6 +9,6 @@ int binaryGap(int number);
 
 void intToBin(int n, char *binary, int binarySize);
 
-int calculateGap(const char *bin, int binSize);
+int calculateGap(const char* bin,int binSize);
 
 #endif //LABORATORIOC_SECTION1_H
