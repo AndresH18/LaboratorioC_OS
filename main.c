@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include "roman.h"
 #include "section1.h"
+#include "section2.h"
 
 int main() {
 
@@ -16,7 +17,9 @@ int main() {
 //    // deallocate memory
 //    free(pWord);
 
-    printf("%d", binaryGap(529));
+//    printf("%d", binaryGap(529));
+    int ar[] = {9, 3, 9, 3, 9, 7, 9};
+    printf("%d", findNotPaired(ar, 7));
     return 0;
 }
 
