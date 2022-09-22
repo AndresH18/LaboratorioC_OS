@@ -32,6 +32,8 @@
 #define R_CM  "CM"
 #define R_M   "M"
 
+char *numberToRoman(int number);
+
+
 #endif //LABORATORIOC_ROMAN_H
 
-char *numberToRoman(int number);
