@@ -3,18 +3,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "roman.h"
+#include "section1.h"
 
 int main() {
 
-    // create pointer for the roman word
-    char *pWord;
-    // convert number to roman, get pointer
-    pWord = numberToRoman(10);
-    // print char array
-    printf("%s", pWord);
-    // deallocate memory
-    free(pWord);
+//    // create pointer for the roman word
+//    char *pWord;
+//    // convert number to roman, get pointer
+//    pWord = numberToRoman(10);
+//    // print char array
+//    printf("%s", pWord);
+//    // deallocate memory
+//    free(pWord);
 
+    printf("%d", binaryGap(529));
     return 0;
 }
 
