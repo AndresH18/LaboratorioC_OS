@@ -5,6 +5,7 @@
 #include "roman.h"
 #include "section1.h"
 #include "section2.h"
+#include "section3.h"
 
 int main() {
 
@@ -18,8 +19,9 @@ int main() {
 //    free(pWord);
 
 //    printf("%d", binaryGap(529));
-    int ar[] = {9, 3, 9, 3, 9, 7, 9};
-    printf("%d", findNotPaired(ar, 7));
+    int a[] = {3,1,2,4,3};
+    int i = tapeEquilibrium(a, 5);
+    printf("%d", i);
     return 0;
 }
 
