@@ -10,7 +10,7 @@ int frogJump(const int x, const int y, const int d) {
         return -1;
     }
     int pos = x, count = 0;
-    while (pos <= y) {
+    while (pos < y) {
         pos += d;
         count++;
     }
