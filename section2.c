@@ -30,9 +30,9 @@ int findNotPaired(int *array, const int size) {
             if (array[i] == array[j]) {
                 count++;
             }
-            if (count % 2 != 0) {
-                return array[i];
-            }
+        }
+        if (count % 2 != 0) {
+            return array[i];
         }
     }
     return -1;
