@@ -195,7 +195,7 @@ void calculadora() {
                 scanf_s("%lf", &tasa);
                 fflush(stdin);
 
-                printf("El %.3f de %.3f es %.3f\n", tasa, valor, descontarPorcentaje(valor, tasa));
+                printf("%.3lf menos el %.3fl es %.3f\n", valor, tasa, descontarPorcentaje(valor, tasa));
                 fflush(stdout);
                 break;
             case 0:

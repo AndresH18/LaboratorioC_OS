@@ -13,7 +13,7 @@ int sumar(int i1, int i2) {
 }
 
 double restarDouble(double d1, double d2) {
-    return d1 + d2;
+    return d1 - d2;
 }
 
 int restar(int i1, int i2) {
