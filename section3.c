@@ -18,11 +18,11 @@ int frogJump(const int x, const int y, const int d) {
     return count;
 }
 
-int missingNumberArray(const int *array, const int size) {
+unsigned long long missingNumberArray(const int *array, const int size) {
     // since elements range is (1, size+1)
     int n = size + 1;
     // the sum of all integers from 1 to n is = n*(n+1)/2
-    int sum = n * (n + 1) / 2;
+    unsigned long long sum = n * (n + 1) / 2;
     // subtract all elements in array, the result is the missing number
     for (int i = 0; i < size; ++i) {
         sum -= array[i];

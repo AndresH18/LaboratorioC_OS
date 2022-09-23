@@ -45,8 +45,10 @@ char *numberToRoman(int number) {
                 case 9:
                 case 11:
                     size += 2;
+                    break;
                 default:
                     size++;
+                    break;
             }
             // reallocate pointer
             realloc(word, size * sizeof(char));

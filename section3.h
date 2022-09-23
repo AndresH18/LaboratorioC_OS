@@ -7,7 +7,7 @@
 
 int frogJump(int x, int y, int d);
 
-int missingNumberArray(const int *array, int size);
+unsigned long long missingNumberArray(const int *array, int size);
 
 int tapeEquilibrium(const int *array, int size);
 #endif //LABORATORIOC_SECTION3_H
