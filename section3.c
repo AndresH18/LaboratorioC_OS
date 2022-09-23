@@ -9,13 +9,18 @@ int frogJump(const int x, const int y, const int d) {
     if (x > y || d <= 0) {
         return -1;
     }
-    int pos = x, count = 0;
-    while (pos < y) {
-        pos += d;
-        count++;
-    }
+    if ((y - x) % d == 0)
+        return (y - x) / d;
+    else
+        return (int) ((y - x) / d) + 1;
 
-    return count;
+//    int pos = x, count = 0;
+//    while (pos < y) {
+//        pos += d;
+//        count++;
+//    }
+//
+//    return count;
 }
 
 unsigned long long missingNumberArray(const int *array, const int size) {
